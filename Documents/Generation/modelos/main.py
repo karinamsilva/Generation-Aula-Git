@@ -3,8 +3,12 @@ import pandas as pd
 df_modelos = pd.read_csv('modelos.csv', sep=";")
 #print(df_modelos)
 
+
+#printando as colunas do arquivo
 #print('Colunas encontradas no arquivo')
 #print(list(df_modelos.columns))
+
+#entrada manual dos dados
 
 novo_modelo = {
     "id":"6",
@@ -34,7 +38,7 @@ terceiro_modelo = {
 #df_modelos.to_csv('modelos.csv', sep=";", index=False)
 
 
-#inserção dos modelos com loop while 
+#inserção dos dados com loop while através do usuário
 
 def choice():
     choice = input('Informe uma opção: \n1 - Adicionar um modelo \n2 - Imprimir na tela \n3 - Sair\n')
@@ -63,6 +67,7 @@ while True:
 
         df_modelos = pd.concat([df_modelos, pd.DataFrame([quarto_modelo])], ignore_index=True)
         df_modelos.to_csv('modelos.csv', sep=";", index=False)
+        #adicionando separador conforme o arquivo csv
         escolha = choice()
     elif escolha == "2":
         print(df_modelos)

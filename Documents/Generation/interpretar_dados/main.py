@@ -13,6 +13,8 @@ print(df_dados_turma)
 #adiciona novo valor no data frame e em geral o data frame tem muitos campos
 # se o python lê como chave-valor, posso utilizar dicionario para adicionar valores
 
+#inserção manual dos dados
+
 novo_aluno = {
     "Carimbo de data/hora":"17/11/2025 10:33:42",
     "nome": "Karina",
